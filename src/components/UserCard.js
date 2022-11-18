@@ -24,32 +24,21 @@ function UserCard({ userFilteredList }) {
     <>
       {user ? (
         userFilteredList.map((user, idx) => (
-        <Col key={idx} className="mt-4 d-flex" md="3" >
-            <Card className="w-100 h-100 indiv-card"  >
-                <div>
-                    <Card.Img src={`${user.picture.large}`}></Card.Img>
+        <Col key={idx} className="mt-4" md="4" >
+            <div className="card mb-3 w-100 h-100" >
+                <div className="row g-0">
+                    <div className="col-md-5 my-auto">
+                    <img src={`${user.picture.large}`} className="img-fluid rounded-start pt-3 ps-2" alt="random-users"/>
+                    </div>
+                    <div className="col-md-7 my-auto">
+                    <div className="card-body ">
+                        <h5 className="card-title">{user.name.first} {user.name.last}</h5>
+                        <p className="card-text">{user.location.state}, {user.location.city}</p>
+                        {/* <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p> */}
+                    </div>
+                    </div>
                 </div>
-                <div>
-                    <Card.Body>
-                        <Card.Title >      
-                        {user.name.first} {user.name.last}
-                        </Card.Title>
-                        <Card.Text >
-                        {user.gender}
-                        {user.email}
-                        </Card.Text>
-                        {/* {isFriend(name) ? (
-                        <Button onClick={() => removeUser(name)} variant="danger">
-                        Remove Friend
-                        </Button>
-                    ) : (
-                        <Button onClick={() => addUSer({ name, url })}>
-                        Add Friend
-                        </Button>
-                    )} */}
-                    </Card.Body>
-                </div>
-            </Card>
+            </div>
         </Col>
         ))
       ) : (
