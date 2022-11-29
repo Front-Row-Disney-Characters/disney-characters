@@ -32,7 +32,10 @@ function UserCard({ userFilteredList }) {
                     </div>
                     <div className="col-md-7 my-auto">
                     <div className="card-body ">
+                      <Link to={`/${user.name.first}-${user.name.last}`} style={{color: "black"}}>
                         <h5 className="card-title">{user.name.first} {user.name.last}</h5>
+                      </Link>
+                        {/* <h5 className="card-title">{user.name.first} {user.name.last}</h5> */}
                         <p className="card-text">{user.location.state}, {user.location.city}</p>
                         {/* <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p> */}
                     </div>

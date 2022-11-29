@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from '../src/components/Navigation';
 import { Home } from './routes/Home';
+import { UserDetails } from './routes/UserDetails';
 
 
 // const maxUsers = 20;
@@ -32,8 +33,8 @@ function App () {
                     <Navigation />
                     <Routes>
                         <Route path="/" element={<Home userList={userList} userFilteredList={userFilteredList} setUserFilteredList={setUserFilteredList}/>} />
-                        {/* <Route path="/:name" element={<UserDetails />} />
-                        <Route path="/friendrequest" element={<Friends />} /> */}
+                        <Route path="/:firstname-lastname" element={<UserDetails userFilteredList={userFilteredList}/>} />
+                        {/* <Route path="/friendrequest" element={<Friends />} /> */}
                     </Routes>
                 </div>
             </BrowserRouter>

@@ -18,3 +18,9 @@ body {
     transform: scale(1.05);
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
   }
+
+  .loading {
+    /* font-size: larger; */
+    text-align: center;
+    color:rgba(242, 244, 244, 0.911)
+  }
