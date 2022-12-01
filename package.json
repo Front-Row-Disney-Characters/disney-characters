@@ -1,11 +1,11 @@
 {
-  "name": "find-a-friend",
+  "name": "disney",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
+    "start": "parcel src/index.html",
     "build": "parcel build index.html"
   },
   "repository": {
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Front-Row-Find-A-Friend/find-a-friend#readme",
   "dependencies": {
-    "parcel": "^2.8.0"
+    "bootstrap": "^5.2.3",
+    "parcel": "^2.8.0",
+    "react-bootstrap": "^2.6.0"
   }
 }
