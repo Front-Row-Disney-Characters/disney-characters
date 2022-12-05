@@ -12,7 +12,7 @@
     position:absolute;
     transition: all .3s ease;
     opacity: 0;
-    background-color: rgb(243, 82, 82);
+    background-color: rgba(243, 82, 82, 1);
 }
 .btnStyle:hover .overlay{
     opacity: 1;
@@ -31,6 +31,17 @@
     color:#fff;
     position: absolute;
     top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:20px;
+}
+.cardImgTitle{
+    color:#fff;
+}
+
+.starContainer{
+    position: absolute;
+    top:75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size:20px;
