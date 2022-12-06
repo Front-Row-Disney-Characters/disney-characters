@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
 import { Navigation } from '../src/components/Navigation';
 import { Home } from './routes/Home';
 import { UserDetails } from './routes/UserDetails';
+import { Favorites } from './components/Favorites';
+import { FavCharacter } from './routes/FavCharacter';
 
 
 // const maxUsers = 20;
@@ -34,7 +36,8 @@ function App () {
                     <Routes>
                         <Route path="/" element={<Home userList={userList} userFilteredList={userFilteredList} setUserFilteredList={setUserFilteredList}/>} />
                         <Route path="/characters/:_id" element={<UserDetails userFilteredList={userFilteredList}/>} />
-                        {/* <Route path="/friendrequest" element={<Friends />} /> */}
+                        <Route path="/favorites" element={<FavCharacter />} />
+                    
                     </Routes>
                 </div>
             </BrowserRouter>

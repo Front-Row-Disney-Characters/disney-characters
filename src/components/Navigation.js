@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import Badge from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import friends from '../public/friends.png';
@@ -19,7 +20,8 @@ function Navigation() {
                     </Navbar.Brand>
                     <Nav>
                         <Nav.Link as={Link} to='/'>Disney Characters</Nav.Link>
-                        <Nav.Link  as={Link} to='/friends'>Favorites</Nav.Link>
+                        <Nav.Link  as={Link} to='/favorites'>Favorites</Nav.Link>
+                        <Badge className="alignRightBadge">{10}</Badge>
                     </Nav>
                 </Container>
             </Navbar>
