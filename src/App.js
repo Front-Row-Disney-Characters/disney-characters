@@ -14,6 +14,7 @@ function App () {
 
     const [userList, setUserList] = useState([]);
     const [userFilteredList, setUserFilteredList] = useState([]);
+    const[favorite, setFavorite] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,9 +35,9 @@ function App () {
                 <div data-testid="app">
                     <Navigation />
                     <Routes>
-                        <Route path="/" element={<Home userList={userList} userFilteredList={userFilteredList} setUserFilteredList={setUserFilteredList}/>} />
-                        <Route path="/characters/:_id" element={<UserDetails userFilteredList={userFilteredList}/>} />
-                        <Route path="/favorites" element={<FavCharacter />} />
+                        <Route path="/" element={<Home userList={userList} userFilteredList={userFilteredList} setUserFilteredList={setUserFilteredList} favorite={favorite} setFavorite={setFavorite} />} />
+                        <Route path="/characters/:_id" element={<UserDetails userFilteredList={userFilteredList} />} />
+                        <Route path="/favorites" element={<FavCharacter favorite={favorite} setFavorite={setFavorite} />} />
                     
                     </Routes>
                 </div>

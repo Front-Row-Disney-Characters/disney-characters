@@ -2,11 +2,9 @@ import React, { useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
 
-
 function UserDetails() {
 
-    const [user, setUser] = useState(null);
-    const [myCharacter, setMyCharacter] = useState([]);
+    const [user, setUser] = useState(null)
 
     const params = useParams();
 
@@ -61,7 +59,6 @@ function UserDetails() {
                       ))}
                     </ul>
                   </div>
-                  
                 </div>
               </div>
             </div>

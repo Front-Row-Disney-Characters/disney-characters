@@ -40,7 +40,6 @@ function UserCard({ id, url, name, userFilteredList }) {
                         <div className="text">
                           <Link to={`/characters/${id}`} style={{color: "black"}}>
                             <h5 className="card-title cardImgTitle">{user.name}</h5>
-                            <span>Learn More About Me.</span>
                           </Link>
                         </div>
                         <div className='starContainer'>

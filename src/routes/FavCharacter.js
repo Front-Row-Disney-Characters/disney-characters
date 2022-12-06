@@ -6,11 +6,19 @@ import { Favorites } from '../components/Favorites';
 function FavCharacter() {
     return(
         <div>
-            <h5>hello</h5>
+            <Favorites />
         </div>
     )
+//     ..................FavCharacter
+
+//     import React, { useEffect, useState} from 'react';
+// import { useParams } from 'react-router-dom';
+
+
+
+// function UserDetails({user, favorite, setFavorite}) {
+
 //     const [user, setUser] = useState(null);
-//     const [myCharacter, setMyCharacter] = useState([]);
 
 //     const params = useParams();
 
@@ -22,9 +30,10 @@ function FavCharacter() {
 //     setUser(data);
 //   }
 //     fetchSingleUser()
+//     //   .catch(console.error);
 //     }, []);
 
-    
+//       // if user state is not(!) true (false aka still initial state of null (which is falsey)), then return "loading..." once api is fetched, this conditonal statement will be false and the other return below will render
 //     if (!user) {
 //         return <h2 className="loading" >Loading...</h2>;
 //       }
@@ -39,6 +48,8 @@ function FavCharacter() {
 //               <h1>{user.name}</h1>
 //               <div id="description" className='d-flex mt-3'>
 //                 <div className='me-3'>
+//                   {/* <p><span className='fw-bold'>TV Show(s)</span>: {pokemon.height}</p>
+//                   <p><span className='fw-bold'>Weight</span>: {pokemon.weight}</p> */}
 //                   <div><span className='fw-bold'>TV Show(s)</span>:               
 //                     <ul>
 //                       {user.tvShows.map((tvshow, idx) => (
@@ -64,12 +75,17 @@ function FavCharacter() {
 //                   </div>
                   
 //                 </div>
+//                 {favorite.includes(user) ?(<button className="remove" onClick={()=>{favorite.filter(c=>c.id!==prod.id)}}>Remove from List</button>):(<button className="add" onClick={()=>{setFavorite(...favorite, user)}}>Add to List</button>)}
 //               </div>
 //             </div>
 
 //         </div>
 //         </>
 //       )
+// }
+
+// export { UserDetails }
+// .props..............
 }
 
 export { FavCharacter }
