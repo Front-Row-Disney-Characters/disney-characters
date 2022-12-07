@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import { UserCard } from '../components/UserCard';
 
 import Form from 'react-bootstrap/Form';
@@ -8,9 +8,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 
+
 function Home({userList, userFilteredList, setUserFilteredList}) {
-
-
   function handleChange(e) {
     const value = e.target.value;
     const regex = new RegExp(value, 'gi');

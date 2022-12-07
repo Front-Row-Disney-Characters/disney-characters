@@ -1,15 +1,22 @@
-import React from 'react';
-// import {StarSolid} from "./svg/star-solid.svg";
-// import {StarRegular} from "./svg/star-regular.svg";
-// import {StarHalf} from "./svg/star-half-stroke-solid.svg";
+import React, { useContext, useEffect, useState} from 'react';
 import Button from "react-bootstrap/Button";
+import { Favorites, FavoritesList } from '../components/Favorites';
+import { user } from '../routes/UserDetails';
 
 const StarRateBtn =()=>{
-   
+    const{favorite, setFavorite} = useContext(FavoritesList)
 
     return(
         <div>
-           <Button variant='primary'>Add Me.</Button>
+           {/* <Button variant='primary'>Add Me.</Button>
+           <Button variant='primary'>Remove Me.</Button> */}
+           {favorite.includes(user) ?(<Button className="remove" 
+           onClick={()=>{favorite.filter(c=>c.id!==prod.id)}}>
+            Remove Me.
+            </Button>):(<Button className="add"
+             onClick={()=>{setFavorite(...favorite, user)}}>
+                Add Me.
+            </Button>)}
         </div>
     )
 }

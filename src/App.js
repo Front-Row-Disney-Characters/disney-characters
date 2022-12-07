@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
 import { Navigation } from '../src/components/Navigation';
 import { Home } from './routes/Home';
 import { UserDetails } from './routes/UserDetails';
-import { Favorites } from './components/Favorites';
+import { FavCharacter } from './routes/FavCharacter';
 import { FavCharacter } from './routes/FavCharacter';
 
 
