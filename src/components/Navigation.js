@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image';
 import friends from '../public/friends.png';
 
 import { Link } from 'react-router-dom'
-import { FavoritesList } from './Favorites';
+import { FavoritesList } from '../context/Favorites';
 
 function Navigation() {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Favorites} from '../components/Favorites';
+import { Favorites} from '../context/Favorites';
 
 
 function FavCharacter() {

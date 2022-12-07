@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState} from 'react';
 import Button from "react-bootstrap/Button";
-import { Favorites, FavoritesList } from '../components/Favorites';
+import { Favorites, FavoritesList } from '../context/Favorites';
 import { user } from '../routes/UserDetails';
 
 const StarRateBtn =()=>{
