@@ -5,7 +5,7 @@ const FavoritesList = createContext()
 const Favorites=({children})=>{
     const [favorite, setFavorite] = useState([]);
 
-    const toggleTheme=()=>{
+    const toggleCharacter=()=>{
         setFavorite();
     }
 

@@ -4,17 +4,15 @@ import { Favorites, FavoritesList } from '../components/Favorites';
 import { user } from '../routes/UserDetails';
 
 const StarRateBtn =()=>{
-    const{favorite, setFavorite} = useContext(FavoritesList)
+    const{favorite, toggleCharacter } = useContext(FavoritesList)
 
     return(
         <div>
-           {/* <Button variant='primary'>Add Me.</Button>
-           <Button variant='primary'>Remove Me.</Button> */}
            {favorite.includes(user) ?(<Button className="remove" 
            onClick={()=>{favorite.filter(c=>c.id!==prod.id)}}>
             Remove Me.
             </Button>):(<Button className="add"
-             onClick={()=>{setFavorite(...favorite, user)}}>
+             onClick={()=>{toggleCharacter(...favorite, user)}}>
                 Add Me.
             </Button>)}
         </div>

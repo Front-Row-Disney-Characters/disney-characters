@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Badge from 'react-bootstrap/Navbar';
@@ -7,9 +7,11 @@ import Image from 'react-bootstrap/Image';
 import friends from '../public/friends.png';
 
 import { Link } from 'react-router-dom'
+import { FavoritesList } from './Favorites';
 
 function Navigation() {
 
+    const { favorite } = useContext(FavoritesList);
     return (
         <>
             <Navbar sticky='top' bg='light' variant='light' className="mb-4">
@@ -21,7 +23,7 @@ function Navigation() {
                     <Nav>
                         <Nav.Link as={Link} to='/'>Disney Characters</Nav.Link>
                         <Nav.Link  as={Link} to='/favorites'>Favorites</Nav.Link>
-                        <Badge className="alignRightBadge">{10}</Badge>
+                        <Badge className="alignRightBadge">({favorite.length})</Badge>
                     </Nav>
                 </Container>
             </Navbar>
