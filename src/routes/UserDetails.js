@@ -26,44 +26,50 @@ function UserDetails() {
       
     return (
         <>
-            <div className='d-flex justify-content-evenly align-items-center mt-5 single-view'>
-            <div>
-              <img src={`${user.imageUrl}`} height={'450'}/>
-            </div>
-            <div>
-              <h1>{user.name}</h1>
-              <div id="description" className='d-flex mt-3'>
-                <div className='me-3'>
-                  {/* <p><span className='fw-bold'>TV Show(s)</span>: {pokemon.height}</p>
-                  <p><span className='fw-bold'>Weight</span>: {pokemon.weight}</p> */}
-                  <div><span className='fw-bold'>TV Show(s)</span>:               
-                    <ul>
-                      {user.tvShows.map((tvshow, idx) => (
-                        <li key={idx}>{tvshow}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                  <div><span className='fw-bold'>Films</span>:               
+            <div className='d-flex justify-content-evenly align-items-center mt-5 single-view '>
+              <div>
+                <img src={`${user.imageUrl}`} height={'450'}/>
+              </div>
+              <div>
+                <h1>{user.name}</h1>
+                <div id="description" className='d-flex mt-3'>
+                  <div className='me-5'>
+                    {/* <p><span className='fw-bold'>TV Show(s)</span>: {pokemon.height}</p>
+                    <p><span className='fw-bold'>Weight</span>: {pokemon.weight}</p> */}
+                    <div><span className='fw-bold'>TV Shows</span>:               
                       <ul>
-                      {user.films.map((film, idx) => (
-                        <li key={idx}>{film}</li>
-                      ))}
-                    </ul>
+                        {user.tvShows.length === 0 ? <li>N/A</li> : user.tvShows.map((tvshow, idx) => (
+                          <li key={idx}>{tvshow}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div><span className='fw-bold'>Short Films</span>:               
+                        <ul>
+                        {user.shortFilms.length === 0 ? <li>N/A</li> : user.shortFilms.map((short, idx) => (
+                          <li key={idx}>{short}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div><span className='fw-bold'>Video Games</span>:               
-                      <ul>
-                      {user.videoGames.map((game, idx) => (
-                        <li key={idx}>{game}</li>
-                      ))}
-                    </ul>
+                  <div>
+                    <div><span className='fw-bold'>Films</span>:               
+                        <ul>
+                        {user.films.length === 0 ? <li>N/A</li> : user.films.map((film, idx) => (
+                          <li key={idx}>{film}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div><span className='fw-bold'>Video Games</span>:               
+                        <ul>
+                        {user.videoGames.length === 0 ? <li>N/A</li> : user.videoGames.map((game, idx) => (
+                          <li key={idx}>{game}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-        </div>
         </>
       )
 }
