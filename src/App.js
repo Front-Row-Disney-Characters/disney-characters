@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from '../src/components/Navigation';
 import { Home } from './routes/Home';
 import { UserDetails } from './routes/UserDetails';
+import { FavCharacters } from './routes/FavCharacters';
+import { FavoritesProvider } from './components/FavoritesProvider';
 
 
 // const maxUsers = 20;
@@ -27,18 +29,18 @@ function App () {
         }, []);
 
     return (
-        <>
+        <FavoritesProvider>
             <BrowserRouter>
                 <div data-testid="app">
                     <Navigation />
                     <Routes>
                         <Route path="/" element={<Home userList={userList} userFilteredList={userFilteredList} setUserFilteredList={setUserFilteredList}/>} />
                         <Route path="/characters/:_id" element={<UserDetails userFilteredList={userFilteredList}/>} />
-                        {/* <Route path="/friendrequest" element={<Friends />} /> */}
+                        <Route path="/favorites" element={<FavCharacters />} />
                     </Routes>
                 </div>
             </BrowserRouter>
-        </>
+        </FavoritesProvider>
     )
 }
 
