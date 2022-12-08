@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-//added
-import { FavoritesList } from './FavCharacter';
+
 
 
 // function UserDetails() {
@@ -9,7 +8,7 @@ import { FavoritesList } from './FavCharacter';
 
     const [user, setUser] = useState(null)
     //added
-    const {favorite, setFavorite} = useContext(FavoritesList);
+    // const {favorite, setFavorite} = useContext(FavoritesList);
 
     const params = useParams();
 

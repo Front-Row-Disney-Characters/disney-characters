@@ -9,7 +9,7 @@ const StarRateBtn =()=>{
     return(
         <div>
            {favorite.includes(user) ?(<Button className="remove" 
-           onClick={()=>{favorite.filter(c=>c.id!==prod.id)}}>
+           onClick={()=>{favorite.filter(c=>c.id!==user.id)}}>
             Remove Me.
             </Button>):(<Button className="add"
              onClick={()=>{toggleCharacter(...favorite, user)}}>
