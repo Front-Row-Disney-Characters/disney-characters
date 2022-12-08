@@ -6,9 +6,11 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import {Footer} from '../components/Footer'
 
 
-function Home({userList, userFilteredList, setUserFilteredList}) {
+
+function Home({page, setPage, userList, userFilteredList, setUserFilteredList}) {
 
 
   function handleChange(e) {
@@ -45,6 +47,7 @@ function Home({userList, userFilteredList, setUserFilteredList}) {
             </Col>
           ))}
         </Row>
+        <Footer page={page} setPage={setPage}/>
       </Container>
     </div>
   );

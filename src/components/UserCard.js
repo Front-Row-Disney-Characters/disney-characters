@@ -14,7 +14,6 @@ function UserCard({ id, url, name, userFilteredList }) {
     const res = await fetch(url);
     const data = await res.json();
     setUser(data);
-    console.log(user)
   };
 
   useEffect(() => {
