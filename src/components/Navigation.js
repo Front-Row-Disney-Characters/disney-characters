@@ -11,7 +11,7 @@ function Navigation() {
 
     return (
         <>
-            <Navbar sticky='top' bg='light' variant='light' className="mb-4">
+            <Navbar sticky='top' bg='light' variant='light' className="mb-4 navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
                 <Container>
                     <Navbar.Brand>
                         <Image src={friends} width="65" className="me-2" />
