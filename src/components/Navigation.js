@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import friends from '../public/friends.png';
+import friends from '../public/disney.jpeg';
 
 import { Link } from 'react-router-dom'
 
