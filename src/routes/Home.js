@@ -6,11 +6,11 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "./Home.css";
-import disney from '../public/disney.jpg';
+import {Footer} from '../components/Footer'
 
 
-function Home({userList, userFilteredList, setUserFilteredList}) {
+
+function Home({page, setPage, userList, userFilteredList, setUserFilteredList}) {
 
 
   function handleChange(e) {
@@ -24,21 +24,16 @@ function Home({userList, userFilteredList, setUserFilteredList}) {
   }
 
   return (
-    <div className='Body'>
-      
-      <div className='UserInput'>
-        <InputGroup onChange={handleChange}  >
-        <h1 className='InputGrouText'>Search Disney Characters:</h1>
-        <input
-          className='FormControl'
-          //placeholder="Search"
-          //aria-label="search"
-          //aria-describedby="basic-addon1"
-          />
-        </InputGroup>
-      </div>
-      
-      <Container >
+    <div data-testid="app">
+      <InputGroup onChange={handleChange} className="mb-3 w-50 mx-auto">
+      <InputGroup.Text id="basic-addon1">Search Disney Characters:</InputGroup.Text>
+        <Form.Control
+          placeholder="Search"
+          aria-label="search"
+          aria-describedby="basic-addon1"
+        />
+      </InputGroup>
+      <Container>
         <Row md={4}>
           {userFilteredList.map((user, idx) => (
             <Col key={idx} className="mt-4" md="4" >
@@ -52,9 +47,8 @@ function Home({userList, userFilteredList, setUserFilteredList}) {
             </Col>
           ))}
         </Row>
+        <Footer page={page} setPage={setPage}/>
       </Container>
-      
-      
     </div>
   );
 }
