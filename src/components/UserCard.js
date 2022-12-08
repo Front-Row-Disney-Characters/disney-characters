@@ -2,10 +2,13 @@ import React, { useEffect, useState, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import { FavoritesContext } from './FavoritesProvider';
 import Col from "react-bootstrap/Col";
 
 
 function UserCard({ id, url, name, userFilteredList }) {
+
+  const { addFavorite, removeFavorite, isFavorite } = useContext(FavoritesContext);
 
   const [user, setUser] = useState(null);
 
@@ -21,6 +24,8 @@ function UserCard({ id, url, name, userFilteredList }) {
     fetchUser();
   }, [userFilteredList]);
 
+  console.log(user)
+
   return (
     <>
       {user ? (
@@ -31,21 +36,23 @@ function UserCard({ id, url, name, userFilteredList }) {
                     </div>
                     <div className="col-md-6 my-auto">
                       <div className="card-body">
-                        <Link to={`/characters/${id}`} style={{color: "black"}}>
+                        <Link to={`/characters/${url.substring(37)}`} style={{color: "black"}}>
                           <h5 className="card-title">{user.name}</h5>
                         </Link>
                       </div>
                     </div>
                 </div>
-                {/* <div className="row pt-3">
-                  <div col-md-6>
-                    <ul>
-                      {user.tvShows.map((tvshow, idx) => (
-                        <li key={idx}>TV Show(s): {tvshow}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div> */}
+              <div className="d-flex justify-content-center mt-3">
+                {isFavorite(name) ? (
+                  <Button onClick={() => removeFavorite(name)} variant="danger" >
+                    Remove from Favorites
+                  </Button>
+                ) : (
+                  <Button onClick={() => addFavorite({ name, url })}>
+                    Add to Favorites
+                  </Button>
+                )}
+              </div>
             </div>
       ) : (
         ""
