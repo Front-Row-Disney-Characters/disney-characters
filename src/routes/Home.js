@@ -6,12 +6,22 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import {Footer} from '../components/Footer'
+import {Footer} from '../components/Footer';
+import Pages from '../components/Pages';
 
 
 
-function Home({page, setPage, userList, userFilteredList, setUserFilteredList}) {
+function Home({page, setPage, userList, userFilteredList, setUserFilteredList,loading}) {
 
+  // const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage] = useState(10);
+  //current 
+  const indexOfLastPage = currentPage * postPerPage;
+  const indexOfFirstPage = indexOfLastPage - postPerPage;
+  const currentPosts = page.slice(indexOfFirstPage, indexOfLastPage);
+  //change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   function handleChange(e) {
     const value = e.target.value;
@@ -21,6 +31,9 @@ function Home({page, setPage, userList, userFilteredList, setUserFilteredList}) 
     });
     setUserFilteredList(filtered);
     // console.log(UserFilteredList)
+      if(loading){
+        return <h2>Loading...</h2>;
+    }
   }
 
   return (
@@ -47,7 +60,22 @@ function Home({page, setPage, userList, userFilteredList, setUserFilteredList}) 
             </Col>
           ))}
         </Row>
-        <Footer page={page} setPage={setPage}/>
+        {/*added pagination */}
+        {/* <Row md={4}>
+          {page.map(post =>(
+            <Col>
+             <li key={post.id} className='list-group-item'>
+                        img={post.imageUrl}
+                        name={post.name}
+                        url={post.url}
+                        id={post._id}
+                    </li>
+            </Col>
+          ))}
+          
+        </Row> */}
+       <Pages page={page} loading={loading}/>
+                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} />
       </Container>
     </div>
   );
