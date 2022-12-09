@@ -7,8 +7,9 @@ const Pages = ({page,loading})=>{
     return(
         <div>
             <ul className='list-group mb-4'>
-                {page.map(post =>(
-                    <li key={post.id} className='list-group-item'>
+                {page.map((post, idx )=>(
+                    <li key={idx} className='list-group-item'>
+                         <img src={`${post.imageUrl}`} className="img-fluid rounded-start pt-3 ps-2" alt="disney characters"/>
                         {post.name}
                     </li>
                 ))}

@@ -14,7 +14,7 @@ import { Footer } from './components/Footer';
     const [page, setPage] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(4);
+    const [postPerPage, setPostPerPage] = useState(10);
     const disneyCharApi = `https://api.disneyapi.dev/characters?page=${page}`;
 
     useEffect(() => {
@@ -60,8 +60,8 @@ import { Footer } from './components/Footer';
                         {/* <Route path="/friendrequest" element={<Friends />} /> */}
                 
                     </Routes>
-                    {/* <Pages page={page} loading={loading}/>
-                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} /> */}
+                    <Pages page={page} loading={loading}/>
+                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} />
                 </div>
             </BrowserRouter>
         </>

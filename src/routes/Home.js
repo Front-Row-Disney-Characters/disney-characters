@@ -74,8 +74,8 @@ function Home({page, setPage, userList, userFilteredList, setUserFilteredList,lo
           ))}
           
         </Row> */}
-       <Pages page={page} loading={loading}/>
-                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} />
+       {/* <Pages page={page} loading={loading}/>
+                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} /> */}
       </Container>
     </div>
   );
