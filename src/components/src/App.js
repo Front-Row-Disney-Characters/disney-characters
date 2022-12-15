@@ -49,7 +49,7 @@ import { Footer } from './components/Footer';
                     <Navigation />
                     <Routes>
                         <Route path="/" element={
-                        <Home page={currentPosts} 
+                        <Home page={page} 
                         loading={loading} 
                         setPage={setPage} 
                         userList={userList} 
@@ -60,7 +60,12 @@ import { Footer } from './components/Footer';
                         {/* <Route path="/friendrequest" element={<Friends />} /> */}
                 
                     </Routes>
-                    <Pages page={page} loading={loading}/>
+                    {/* <Pages page={page} loading={loading}/>
+                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} /> */}
+                    {/* <Pages page={page} loading={loading}/>
+                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} /> */}
+                    {/* <Pages page={page} loading={loading}/> */}
+                    <Pages page={currentPosts} loading={loading}/>
                     <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} />
                 </div>
             </BrowserRouter>

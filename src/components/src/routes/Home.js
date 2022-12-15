@@ -13,15 +13,15 @@ import Pages from '../components/Pages';
 
 function Home({page, setPage, userList, userFilteredList, setUserFilteredList,loading}) {
 
-  // const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(10);
-  //current 
-  const indexOfLastPage = currentPage * postPerPage;
-  const indexOfFirstPage = indexOfLastPage - postPerPage;
-  const currentPosts = page.slice(indexOfFirstPage, indexOfLastPage);
-  //change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  // // const [loading, setLoading] = useState(false);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [postPerPage] = useState(10);
+  // //current 
+  // const indexOfLastPage = currentPage * postPerPage;
+  // const indexOfFirstPage = indexOfLastPage - postPerPage;
+  // const currentPosts = page.slice(indexOfFirstPage, indexOfLastPage);
+  // //change page
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   function handleChange(e) {
     const value = e.target.value;
@@ -74,8 +74,8 @@ function Home({page, setPage, userList, userFilteredList, setUserFilteredList,lo
           ))}
           
         </Row> */}
-       {/* <Pages page={page} loading={loading}/>
-                    <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} /> */}
+       {/* <Pages page={page} loading={loading}/> */}
+                    {/* <Footer postPerPage={postPerPage} totalPosts={page.length} paginate={paginate} /> */}
       </Container>
     </div>
   );
