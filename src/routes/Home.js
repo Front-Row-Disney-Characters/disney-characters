@@ -30,7 +30,7 @@ function Home({userList, userFilteredList, setUserFilteredList}) {
         <InputGroup onChange={handleChange}  >
         <h1 className='InputGrouText'>Search Disney Characters:</h1>
         <input
-          className='FormControl'
+          className='FormControl text-black'
           //placeholder="Search"
           //aria-label="search"
           //aria-describedby="basic-addon1"
