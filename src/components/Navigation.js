@@ -8,6 +8,7 @@ import castle from '../public/disneycastle.png';
 import { Link } from 'react-router-dom'
 import Badge from 'react-bootstrap/Navbar';
 import { FavoritesContext } from './FavoritesProvider';
+import './Navigation.css'
 
 function Navigation() {
 
