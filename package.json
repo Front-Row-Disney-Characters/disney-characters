@@ -1,5 +1,5 @@
 {
-  "name": "find-a-friend",
+  "name": "disney-characters",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Front-Row-Find-A-Friend/find-a-friend.git"
+    "url": "git+https://https://github.com/Front-Row-Disney-Characters/disney-characters.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Front-Row-Find-A-Friend/find-a-friend/issues"
+    "url": "https://https://github.com/Front-Row-Disney-Characters/disney-characters/issues"
   },
-  "homepage": "https://github.com/Front-Row-Find-A-Friend/find-a-friend#readme",
+  "homepage": "https://https://github.com/Front-Row-Disney-Characters/disney-characters#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
     "parcel": "^2.8.0",

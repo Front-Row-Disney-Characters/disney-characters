@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import castle from '../public/disneycastle.png';
+import castle from '../public/castle-disney.png';
 
 import { Link } from 'react-router-dom'
 import Badge from 'react-bootstrap/Navbar';
@@ -15,7 +15,7 @@ function Navigation() {
 
     return (
         <>
-            <Navbar sticky='top' bg='light' variant='light' className="mb-4 navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+            <Navbar sticky='top' bg='light' variant='light==' className="mb-4 navbar text-dark navbar-expand-lg navbar-light fixed-top mask-custom shadow-0 nav">
                 <Container>
                     <Navbar.Brand>
                         <Image src={castle} width="65" className="me-2" />
