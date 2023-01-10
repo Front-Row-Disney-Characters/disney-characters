@@ -9,6 +9,8 @@ import { FavoritesProvider } from './components/FavoritesProvider';
 
 // const maxUsers = 20;
 const disneyCharApi = `https://api.disneyapi.dev/characters`;
+// const disneyCharApi = `https://api.disneyapi.dev/characters?page=65`;
+
 
 function App () {
 

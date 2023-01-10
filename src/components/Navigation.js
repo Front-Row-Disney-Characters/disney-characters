@@ -8,6 +8,7 @@ import castle from '../public/castle-disney.png';
 import { Link } from 'react-router-dom'
 import Badge from 'react-bootstrap/Navbar';
 import { FavoritesContext } from './FavoritesProvider';
+import './Navigation.css'
 
 function Navigation() {
 
@@ -15,15 +16,15 @@ function Navigation() {
 
     return (
         <>
-            <Navbar sticky='top' bg='light' variant='light==' className="mb-4 navbar text-dark navbar-expand-lg navbar-light fixed-top mask-custom shadow-0 nav">
+            <Navbar className='Navigation'>
                 <Container>
-                    <Navbar.Brand>
+                    <Navbar.Brand className='NavigationText'>
                         <Image src={castle} width="65" className="me-2" />
                         Disney Character Collection
                     </Navbar.Brand>
-                    <Nav>
-                        <Nav.Link as={Link} to='/'>Disney Characters</Nav.Link>
-                        <Nav.Link  as={Link} to='/favorites'>Favorites</Nav.Link>
+                    <Nav className='NavigationText'>
+                        <Nav.Link ClassName='FormControl' as={Link} to='/'>Disney Characters</Nav.Link>
+                        <Nav.Link ClassName='FormControl'  as={Link} to='/favorites'>Favorites</Nav.Link>
                         <Badge>({favorites.length})</Badge>
                     </Nav>
                 </Container>
