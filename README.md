@@ -9,7 +9,7 @@ Want to know more about your favorite Disney Characters? Find out with this appl
 
 
 ### Desription of Product
-With use of Dinsey API, users can search Disney Characters and look up details of each character such as what movies, tv shows and games they are in!
+With use of Disney API, users can search Disney Characters and look up details of each character such as what movies, tv shows and games they are in!
 
 Aesthetic, Disney themed font and imagery
 
