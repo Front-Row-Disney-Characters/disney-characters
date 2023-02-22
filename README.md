@@ -14,15 +14,15 @@ With use of Disney API, users can search Disney Characters and look up details o
 Aesthetic, Disney themed font and imagery
 
 You can:
-Click on a Disney character for details
-Add a Character card to favorites
-Remove a Character card from favorites 
+1. Click on a Disney character for details
+2. Add a Character card to favorites
+3. Remove a Character card from favorites 
 
 
 
 #### Future Implemention
-Pagination 
-Additon of more Disney Characters
+1. Pagination 
+2. Additon of more Disney Characters
 
 
 ##### Contributors:
